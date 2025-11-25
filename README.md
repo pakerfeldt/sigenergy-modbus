@@ -5,6 +5,7 @@ Machine-readable Sigenergy Modbus register definitions converted from PDF docume
 ## Files
 
 - `sigenergy-registers.json` - Complete register definitions with addresses, data types, units, and more. 
+- `sigenergy-registers.csv` - Same register data in CSV format
 - `version.json` - Documentation version and revision info
   - `version` - Sigenergy documentation version (e.g., "V2.5")
   - `date` - Documentation date (YYYY-MM-DD format)
@@ -31,5 +32,3 @@ The JSON format includes:
     "permission": "RO"
 }
 ```
-
-Perfect for integrating Sigenergy devices into home automation systems, monitoring dashboards, or custom applications.

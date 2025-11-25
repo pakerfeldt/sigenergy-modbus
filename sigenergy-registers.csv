@@ -1,0 +1,197 @@
+address,comment,dataType,deviceType,gain,hybridInv,id,name,permission,pvInv,quantity,registerType,unit
+30000,Epoch seconds,U32,plant,1,True,p-system-time,System time,RO,True,2,input,s
+30002,,S16,plant,1,True,p-system-time-zone,System time zone,RO,True,1,input,min
+30003,"0: Max self consumption;, 1: AI Mode;, 2: TOU, 7: Remote EMS mode",U16,plant,1,True,p-ems-work-mode,EMS work mode,RO,True,1,input,
+30004,"(gateway or meter connection status), 0: not connected, 1: connected",U16,plant,1,True,p-grid-sensor-status,[Grid Sensor] Status,RO,True,1,input,
+30005,"Data collected from grid sensor at grid to system checkpoint;, >0 buy from grid;<0 sell to grid",S32,plant,1000,True,p-grid-sensor-active-power,[Grid sensor] Active power,RO,True,2,input,kW
+30007,Data collected from grid sensor at grid to system checkpoint;,S32,plant,1000,True,p-grid-sensor-reactive-power,[Grid sensor] reactive power,RO,True,2,input,kVar
+30009,"0: on grid, 1: off grid (auto), 2: off grid (manual)",U16,plant,1,True,p-on-off-grid-status,On/Off Grid status,RO,True,1,input,
+30010,This is should be the base value of all active power adjustment actions,U32,plant,1000,True,p-max-active-power,Max active power,RO,True,2,input,kW
+30012,This is should be the base value of all reactive power adjustment actions,U32,plant,1000,True,p-max-apparent-power,Max apparent power,RO,True,2,input,kVar
+30014,,U16,plant,10,True,p-ess-soc,[ESS] SOC,RO,False,1,input,%
+30015,,S32,plant,1000,True,p-plant-phase-a-active-power,Plant phase A active power,RO,True,2,input,kW
+30017,,S32,plant,1000,True,p-plant-phase-b-active-power,Plant phase B active power,RO,True,2,input,kW
+30019,,S32,plant,1000,True,p-plant-phase-c-active-power,Plant phase C active power,RO,True,2,input,kW
+30021,,S32,plant,1000,True,p-plant-phase-a-reactive-power,Plant phase A reactive power,RO,True,2,input,kVar
+30023,,S32,plant,1000,True,p-plant-phase-b-reactive-power,Plant phase B reactive power,RO,True,2,input,kVar
+30025,,S32,plant,1000,True,p-plant-phase-c-reactive-power,Plant phase C reactive power,RO,True,2,input,kVar
+30027,"If any hybrid inverter has alarm , then this alarm will be set accordingly. Refer to Appendix 2",U16,plant,1,True,p-general-alarm1,General Alarm1,RO,True,1,input,
+30028,"If any hybrid inverter has alarm , then this alarm will be set accordingly. Refer to Appendix 3",U16,plant,1,True,p-general-alarm2,General Alarm2,RO,True,1,input,
+30029,"If any hybrid inverter has alarm , then this alarm will be set accordingly. Refer to Appendix 4",U16,plant,1,True,p-general-alarm3,General Alarm3,RO,True,1,input,
+30030,"If any hybrid inverter has alarm , then this alarm will be set accordingly. Refer to Appendix 5",U16,plant,1,True,p-general-alarm4,General Alarm4,RO,True,1,input,
+30031,,S32,plant,1000,True,p-plant-active-power,Plant active power,RO,True,2,input,kW
+30033,,S32,plant,1000,True,p-plant-reactive-power,Plant reactive power,RO,True,2,input,kVar
+30035,,S32,plant,1000,False,p-photovoltaic-power,Photovoltaic power,RO,True,2,input,kW
+30037,"<0: discharging, >0: charging",S32,plant,1000,True,p-ess-power,[ESS] power,RO,True,2,input,kW
+30039,"Feed to the ac terminal., Count only the running inverters",U32,plant,1000,True,p-available-max-active-power,Available max active power,RO,True,2,input,kW
+30041,"Absorb from the ac terminal., Count only the running inverters",U32,plant,1000,True,p-available-min-active-power,Available min active power,RO,True,2,input,kW
+30043,"Feed to the ac terminal., Count only the running inverters",U32,plant,1000,True,p-available-max-reactive-power,Available max reactive power,RO,True,2,input,kVar
+30045,"Absorb from the ac terminal., Count only the running inverters",U32,plant,1000,True,p-available-min-reactive-power,Available min reactive power,RO,True,2,input,kVar
+30047,Count only the running inverters,U32,plant,1000,True,p-ess-available-max-charging-power,[ESS] Available max charging power,RO,True,2,input,kW
+30049,Count only the running inverters,U32,plant,1000,True,p-ess-available-max-discharging-power,[ESS] Available max discharging power,RO,True,2,input,kW
+30051,Refer to Appendix 1,U16,plant,1,True,p-plant-running-state,Plant running state,RO,True,1,input,
+30052,"Data collected from grid sensor at grid to system checkpoint;, >0 buy from grid;<0 sell to grid",S32,plant,1000,True,p-grid-sensor-phase-a-active-power,[Grid sensor] Phase A active power,RO,True,2,input,kW
+30054,"Data collected from grid sensor at grid to system checkpoint;, >0 buy from grid;<0 sell to grid",S32,plant,1000,True,p-grid-sensor-phase-b-active-power,[Grid sensor] Phase B active power,RO,True,2,input,kW
+30056,"Data collected from grid sensor at grid to system checkpoint;, >0 buy from grid;<0 sell to grid",S32,plant,1000,True,p-grid-sensor-phase-c-active-power,[Grid sensor] Phase C active power,RO,True,2,input,kW
+30058,Data collected from grid sensor at grid to system checkpoint;,S32,plant,1000,True,p-grid-sensor-phase-a-reactive-power,[Grid sensor] Phase A reactive power,RO,True,2,input,kVar
+30060,Data collected from grid sensor at grid to system checkpoint;,S32,plant,1000,True,p-grid-sensor-phase-b-reactive-power,[Grid sensor] Phase B reactive power,RO,True,2,input,kVar
+30062,Data collected from grid sensor at grid to system checkpoint;,S32,plant,1000,True,p-grid-sensor-phase-c-reactive-power,[Grid sensor] Phase C reactive power,RO,True,2,input,kVar
+30064,Count only the running inverters,U32,plant,100,True,p-ess-available-max-charging-capacity,[ESS] Available max charging capacity,RO,False,2,input,kWh
+30066,Count only the running inverters,U32,plant,100,True,p-ess-available-max-discharging-capacity,[ESS] Available max discharging capacity,RO,False,2,input,kWh
+30068,,U32,plant,1000,True,p-ess-rated-charging-power,[ESS] Rated charging power,RO,False,2,input,kW
+30070,,U32,plant,1000,True,p-ess-rated-discharging-power,[ESS] Rated discharging power,RO,False,2,input,kW
+30072,"If any hybrid inverter has alarm , then this alarm will be set accordingly., Refer to Appendix 11",U16,plant,1,True,p-general-alarm5,General Alarm5,RO,True,1,input,
+30073,,N/A,plant,1,False,p-reserved,Reserved,RO,False,10,input,
+30083,,U32,plant,100,True,p-ess-rated-energy-capacity,[ESS] rated energy capacity,RO,False,2,input,kWh
+30085,,U16,plant,10,True,p-ess-charge-cut-off-soc,[ESS] charge Cut-Off SOC,RO,False,1,input,%
+30086,,U16,plant,10,True,p-ess-discharge-cut-off-soc,[ESS] discharge Cut-Off SOC,RO,False,1,input,%
+30087,"This value is the weighted average of the SOH of all ESS devices in the power plant, with each rated capacity as the weight.",U16,plant,10,True,p-ess-soh,[ESS] SOH,RO,False,1,input,%
+40000,"0: Stop, 1: Start",U16,plant,1,True,p-start-stop,Start/Stop,WO,True,1,holding,
+40001,,S32,plant,1000,True,p-active-power-fixed-adjustment-target-value,Active power fixed adjustment target value,RW,True,2,holding,kW
+40003,"Range: [-60.00 * base value,60.00 * base value]., Takes effect globally regardless of the EMS operating mode.",S32,plant,1000,True,p-reactive-power-fixed-adjustment-target-value,Reactive power fixed adjustment target value,RW,True,2,holding,kVar
+40005,"Range: [-100.00,100.00]",S16,plant,100,True,p-active-power-percentage-adjustment-target-value,Active power percentage adjustment target value,RW,True,1,holding,%
+40006,"Range: [-60.00,60.00]., Takes effect globally regardless of the EMS operating mode.",S16,plant,100,True,p-q-s-adjustment-target-value,Q/S adjustment target value,RW,True,1,holding,%
+40007,"Range: (-1,-0.8] ∪ [0.8,1]., Grid Sensor needed., Takes effect globally regardless of the EMS operating mode.",S16,plant,1000,True,p-power-factor-adjustment-target-value,Power factor adjustment target value,RW,True,1,holding,
+40008,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-a-active-power-fixed-adjustment-target-value,Phase A active power fixed adjustment target value,RW,True,2,holding,kW
+40010,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-b-active-power-fixed-adjustment-target-value,Phase B active power fixed adjustment target value,RW,True,2,holding,kW
+40012,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-c-active-power-fixed-adjustment-target-value,Phase C active power fixed adjustment target value,RW,True,2,holding,kW
+40014,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-a-reactive-power-fixed-adjustment-target-value,Phase A reactive power fixed adjustment target value,RW,True,2,holding,kVar
+40016,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-b-reactive-power-fixed-adjustment-target-value,Phase B reactive power fixed adjustment target value,RW,True,2,holding,kVar
+40018,Valid only when output type is L1/L2/L3/N,S32,plant,1000,True,p-phase-c-reactive-power-fixed-adjustment-target-value,Phase C reactive power fixed adjustment target value,RW,True,2,holding,kVar
+40020,"Valid only when output type is L1/L2/L3/N., Range: [-100.00,100.00]",S16,plant,100,True,p-phase-a-active-power-percentage-adjustment-target-value,Phase A active power percentage adjustment target value,RW,True,1,holding,%
+40021,"Valid only when output type is L1/L2/L3/N., Range: [-100.00,100.00]",S16,plant,100,True,p-phase-b-active-power-percentage-adjustment-target-value,Phase B active power percentage adjustment target value,RW,True,1,holding,%
+40022,"Valid only when output type is L1/L2/L3/N., Range: [-100.00,100.00]",S16,plant,100,True,p-phase-c-active-power-percentage-adjustment-target-value,Phase C active power percentage adjustment target value,RW,True,1,holding,%
+40023,"Valid only when output type is L1/L2/L3/N., Range: [-60.00,60.00]",S16,plant,100,True,p-phase-a-q-s-fixed-adjustment-target-value,Phase A Q/S fixed adjustment target value,RW,True,1,holding,%
+40024,"Valid only when output type is L1/L2/L3/N., Range: [-60.00,60.00]",S16,plant,100,True,p-phase-b-q-s-fixed-adjustment-target-value,Phase B Q/S fixed adjustment target value,RW,True,1,holding,%
+40025,"Valid only when output type is L1/L2/L3/N., Range: [-60.00,60.00]",S16,plant,100,True,p-phase-c-q-s-fixed-adjustment-target-value,Phase C Q/S fixed adjustment target value,RW,True,1,holding,%
+40026,,N/A,plant,1,False,p-reserved,Reserved,RW,False,3,holding,
+40029,"0: disabled, 1: enabled, When needed to control EMS remotely, this register needs to be enabled., When enabled, the plant's EMS work mode (30003) will switch to remote EMS.",U16,plant,1,True,p-remote-ems-enable,Remote EMS enable,RW,True,1,holding,
+40030,"Valid only when output type is L1/L2/L3/N., To enable independent phase control, this parameter must be enabled., 0: disabled, 1: enabled",U16,plant,1,True,p-independent-phase-power-control-enable,Independent phase power control enable,RW,True,1,holding,
+40031,Mode values’ definition refer to Appendix 6,U16,plant,1,True,p-remote-ems-control-mode,Remote EMS control mode,RW,True,1,holding,
+40032,"[0, Rated ESS charging power]., Takes effect when Remote EMS control mode (40031) is 3 or 4.",U32,plant,1000,True,p-ess-max-charging-limit,ESS max charging limit,RW,True,2,holding,kW
+40034,"[0, Rated ESS discharging power]., Takes effect when Remote EMS control mode (40031) is 5 or 6.",U32,plant,1000,True,p-ess-max-discharging-limit,ESS max discharging limit,RW,True,2,holding,kW
+40036,"Takes effect when Remote EMS control mode (40031) is 3, 4, 5 or 6.",U32,plant,1000,True,p-pv-max-power-limit,PV max power limit,RW,True,2,holding,kW
+40038,"Grid Sensor needed., Takes effect globally regardless of the EMS operating mode.",U32,plant,1000,True,p-grid-point-maximum-export-limitation,[Grid Point] Maximum export limitation,RW,True,2,holding,kW
+40040,"Grid Sensor needed., Takes effect globally regardless of the EMS operating mode.",U32,plant,1000,True,p-grid-point-maximum-import-limitation,[Grid Point] Maximum import limitation,RW,True,2,holding,kW
+40042,"Range: [0, 0xFFFFFFFF]. With value 0xFFFFFFFF, register is not valid. In all other cases, Takes effect globally.",U32,plant,1000,True,p-pcs-maximum-export-limitation,PCS maximum export limitation,RW,True,2,holding,kW
+40044,"Range: [0, 0xFFFFFFFF]. With value 0xFFFFFFFF, register is not valid. In all other cases, Takes effect globally.",U32,plant,1000,True,p-pcs-maximum-import-limitation,PCS maximum import limitation,RW,True,2,holding,kW
+30500,,STRING,hybrid-inverter,1,True,hi-model-type,Model type,RO,True,15,input,
+30515,,STRING,hybrid-inverter,1,True,hi-serial-number,Serial number,RO,True,10,input,
+30525,,STRING,hybrid-inverter,1,True,hi-machine-firmware-version,Machine firmware version,RO,True,15,input,
+30540,,U32,hybrid-inverter,1000,True,hi-rated-active-power,Rated active power,RO,True,2,input,kW
+30542,,U32,hybrid-inverter,1000,True,hi-max-apparent-power,Max. apparent power,RO,True,2,input,kWA
+30544,,U32,hybrid-inverter,1000,True,hi-max-active-power,Max. active power,RO,True,2,input,kW
+30546,,U32,hybrid-inverter,1000,True,hi-max-absorption-power,Max. absorption power,RO,True,2,input,kW
+30548,,U32,hybrid-inverter,100,True,hi-rated-battery-capacity,Rated battery capacity,RO,False,2,input,kWh
+30550,,U32,hybrid-inverter,1000,True,hi-ess-rated-charge-power,[ESS] Rated charge power,RO,False,2,input,kW
+30552,,U32,hybrid-inverter,1000,True,hi-ess-rated-discharge-power,[ESS] Rated discharge power,RO,False,2,input,kW
+30554,,N/A,hybrid-inverter,1,False,hi-reserved,Reserved,RO,False,12,input,
+30566,,U32,hybrid-inverter,100,True,hi-ess-daily-charge-energy,[ESS] Daily charge energy,RO,False,2,input,kWh
+30568,,U64,hybrid-inverter,100,True,hi-ess-accumulated-charge-energy,[ESS] Accumulated charge energy,RO,False,4,input,kWh
+30572,,U32,hybrid-inverter,100,True,hi-ess-daily-discharge-energy,[ESS] Daily discharge energy,RO,False,2,input,kWh
+30574,,U64,hybrid-inverter,100,True,hi-ess-accumulated-discharge-energy,[ESS] Accumulated discharge energy,RO,False,4,input,kWh
+30578,Refer to Appendix 1,U16,hybrid-inverter,1,True,hi-running-state,Running state,RO,True,1,input,
+30579,,S32,hybrid-inverter,1000,True,hi-max-active-power-adjustment-value,Max. active power adjustment value,RO,True,2,input,kW
+30581,,S32,hybrid-inverter,1000,True,hi-min-active-power-adjustment-value,Min. active power adjustment value,RO,True,2,input,kW
+30583,,U32,hybrid-inverter,1000,True,hi-max-reactive-power-adjustment-value-fed-to-the-ac-terminal,Max. reactive power adjustment value fed to the ac terminal,RO,True,2,input,kVar
+30585,,U32,hybrid-inverter,1000,True,hi-max-reactive-power-adjustment-value-absorbed-from-the-ac-terminal,Max. reactive power adjustment value absorbed from the ac terminal,RO,True,2,input,kVar
+30587,,S32,hybrid-inverter,1000,True,hi-active-power,Active power,RO,True,2,input,kW
+30589,,S32,hybrid-inverter,1000,True,hi-reactive-power,Reactive power,RO,True,2,input,kVar
+30591,,U32,hybrid-inverter,1000,True,hi-ess-max-battery-charge-power,[ESS] Max. battery charge power,RO,False,2,input,kW
+30593,,U32,hybrid-inverter,1000,True,hi-ess-max-battery-discharge-power,[ESS] Max. battery discharge power,RO,False,2,input,kW
+30595,,U32,hybrid-inverter,100,True,hi-ess-available-battery-charge-energy,[ESS] Available battery charge Energy,RO,False,2,input,kWh
+30597,,U32,hybrid-inverter,100,True,hi-ess-available-battery-discharge-energy,[ESS] Available battery discharge Energy,RO,False,2,input,
+30599,,S32,hybrid-inverter,1000,True,hi-ess-charge-discharge-power,[ESS] Charge / discharge power,RO,False,2,input,kWh
+30601,,U16,hybrid-inverter,10,True,hi-ess-battery-soc,[ESS] Battery SOC,RO,False,1,input,%
+30602,,U16,hybrid-inverter,10,True,hi-ess-battery-soh,[ESS] Battery SOH,RO,False,1,input,%
+30603,,S16,hybrid-inverter,10,True,hi-ess-average-cell-temperature,[ESS] Average cell temperature,RO,False,1,input,°C
+30604,,U16,hybrid-inverter,1000,True,hi-ess-average-cell-voltage,[ESS] Average cell voltage,RO,False,1,input,V
+30605,Refer to Appendix 2,U16,hybrid-inverter,1,True,hi-alarm1,Alarm1,RO,True,1,input,
+30606,Refer to Appendix 3,U16,hybrid-inverter,1,True,hi-alarm2,Alarm2,RO,True,1,input,
+30607,Refer to Appendix 4,U16,hybrid-inverter,1,True,hi-alarm3,Alarm3,RO,True,1,input,
+30608,Refer to Appendix 5,U16,hybrid-inverter,1,True,hi-alarm4,Alarm4,RO,True,1,input,
+30609,Refer to Appendix 11,U16,hybrid-inverter,1,True,hi-alarm5,Alarm5,RO,True,1,input,
+30610,,N/A,hybrid-inverter,1,False,hi-reserved,Reserved,RO,False,10,input,
+30620,,S16,hybrid-inverter,10,True,hi-ess-maximum-battery-cluster-temperature,[ESS] Maximum battery (cluster) temperature,RO,False,1,input,°C
+30621,,S16,hybrid-inverter,10,True,hi-ess-minimum-battery-cluster-temperature,[ESS] Minimum battery (cluster) temperature,RO,False,1,input,°C
+30622,,U16,hybrid-inverter,1000,True,hi-ess-maximum-battery-cluster-cell-voltage,[ESS] Maximum battery (cluster) cell voltage,RO,False,1,input,V
+30623,,U16,hybrid-inverter,1000,True,hi-ess-minimum-battery-cluster-cell-voltage,[ESS] Minimum battery (cluster) cell voltage,RO,False,1,input,V
+31000,,U16,hybrid-inverter,10,True,hi-rated-grid-voltage,Rated grid voltage,RO,True,1,input,V
+31001,,U16,hybrid-inverter,100,True,hi-rated-grid-frequency,Rated grid frequency,RO,True,1,input,Hz
+31002,Hz,U16,hybrid-inverter,100,True,hi-grid-frequency,Grid frequency,RO,True,1,input,Hz
+31003,℃,S16,hybrid-inverter,10,True,hi-pcs-internal-temperature,[PCS] Internal temperature,RO,True,1,input,°C
+31004,0: L/N 1: L1/L2/L3 2: L1/L2/L3/N 3: L1/L2/N,U16,hybrid-inverter,1,True,hi-output-type,Output type,RO,True,1,input,
+31005,"Invalid when output type is L/N, L1/L2/L3/N, or L1/L2/N",U32,hybrid-inverter,100,True,hi-a-b-line-voltage,A-B line voltage,RO,True,2,input,V
+31007,,U32,hybrid-inverter,100,True,hi-b-c-line-voltage,B-C line voltage,RO,True,2,input,V
+31009,,U32,hybrid-inverter,100,True,hi-c-a-line-voltage,C-A line voltage,RO,True,2,input,V
+31011,"When output type is L/N, refers to “Phase voltage”",U32,hybrid-inverter,100,True,hi-phase-a-voltage,Phase A voltage,RO,True,2,input,V
+31013,"Invalid when output type is L/N, L1/L2/L3/N, or L1/L2/N",U32,hybrid-inverter,100,True,hi-phase-b-voltage,Phase B voltage,RO,True,2,input,V
+31015,"Invalid when output type is L/N, L1/L2/L3/N, or L1/L2/N",U32,hybrid-inverter,100,True,hi-phase-c-voltage,Phase C voltage,RO,True,2,input,V
+31017,"When output type is L/N, refers to “Phase current”",S32,hybrid-inverter,100,True,hi-phase-a-current,Phase A current,RO,True,2,input,A
+31019,"Invalid when output type is L/N, L1/L2/L3/N, or L1/L2/N",S32,hybrid-inverter,100,True,hi-phase-b-current,Phase B current,RO,True,2,input,A
+31021,"Invalid when output type is L/N, L1/L2/L3/N, or L1/L2/N",S32,hybrid-inverter,100,True,hi-phase-c-current,Phase C current,RO,True,2,input,A
+31023,,U16,hybrid-inverter,1000,True,hi-power-factor,Power factor,RO,True,1,input,
+31024,,U16,hybrid-inverter,1,True,hi-pack-count,PACK count,RO,True,1,input,
+31025,,U16,hybrid-inverter,1,True,hi-pv-string-count,PV string count,RO,True,1,input,
+31026,,U16,hybrid-inverter,1,True,hi-mppt-count,MPPT count,RO,True,1,input,
+31027,"Please refer to the PV count listed in Table2-1 in chapter 2, to ensure if the register is available.",S16,hybrid-inverter,10,True,hi-pv1-voltage,PV1 voltage,RO,True,1,input,V
+31028,,S16,hybrid-inverter,100,True,hi-pv1-current,PV1 current,RO,True,1,input,A
+31029,,S16,hybrid-inverter,10,True,hi-pv2-voltage,PV2 voltage,RO,True,1,input,V
+31030,,S16,hybrid-inverter,100,True,hi-pv2-current,PV2 current,RO,True,1,input,A
+31031,,S16,hybrid-inverter,10,True,hi-pv3-voltage,PV3 voltage,RO,True,1,input,V
+31032,,S16,hybrid-inverter,100,True,hi-pv3-current,PV3 current,RO,True,1,input,A
+31033,,S16,hybrid-inverter,10,True,hi-pv4-voltage,PV4 voltage,RO,True,1,input,V
+31034,,S16,hybrid-inverter,100,True,hi-pv4-current,PV4 current,RO,True,1,input,A
+31035,,S32,hybrid-inverter,1000,True,hi-pv-power,PV power,RO,True,2,input,kW
+31037,,U16,hybrid-inverter,1000,True,hi-insulation-resistance,Insulation resistance,RO,True,1,input,MΩ
+31038,s,U32,hybrid-inverter,1,True,hi-startup-time,Startup time,RO,True,2,input,s
+31040,s,U32,hybrid-inverter,1,True,hi-shutdown-time,Shutdown time,RO,True,2,input,s
+31042,"Please refer to the PV count listed in Table2-1 in chapter 2, to ensure if the register is available.",S16,hybrid-inverter,10,True,hi-pv5-voltage,PV5 voltage,RO,True,1,input,V
+31043,,S16,hybrid-inverter,100,True,hi-pv5-current,PV5 current,RO,True,1,input,A
+31044,,S16,hybrid-inverter,10,True,hi-pv6-voltage,PV6 voltage,RO,True,1,input,V
+31045,,S16,hybrid-inverter,100,True,hi-pv6-current,PV6 current,RO,True,1,input,A
+31046,,S16,hybrid-inverter,10,True,hi-pv7-voltage,PV7 voltage,RO,True,1,input,V
+31047,,S16,hybrid-inverter,100,True,hi-pv7-current,PV7 current,RO,True,1,input,A
+31048,,S16,hybrid-inverter,10,True,hi-pv8-voltage,PV8 voltage,RO,True,1,input,V
+31049,,S16,hybrid-inverter,100,True,hi-pv8-current,PV8 current,RO,True,1,input,A
+31050,,S16,hybrid-inverter,10,True,hi-pv9-voltage,PV9 voltage,RO,True,1,input,V
+31051,,S16,hybrid-inverter,100,True,hi-pv9-current,PV9 current,RO,True,1,input,A
+31052,,S16,hybrid-inverter,10,True,hi-pv10-voltage,PV10 voltage,RO,True,1,input,V
+31053,,S16,hybrid-inverter,100,True,hi-pv10-current,PV10 current,RO,True,1,input,A
+31054,,S16,hybrid-inverter,10,True,hi-pv11-voltage,PV11 voltage,RO,True,1,input,V
+31055,,S16,hybrid-inverter,100,True,hi-pv11-current,PV11 current,RO,True,1,input,A
+31056,,S16,hybrid-inverter,10,True,hi-pv12-voltage,PV12 voltage,RO,True,1,input,V
+31057,,S16,hybrid-inverter,100,True,hi-pv12-current,PV12 current,RO,True,1,input,A
+31058,,S16,hybrid-inverter,10,True,hi-pv13-voltage,PV13 voltage,RO,True,1,input,V
+31059,,S16,hybrid-inverter,100,True,hi-pv13-current,PV13 current,RO,True,1,input,A
+31060,,S16,hybrid-inverter,10,True,hi-pv14-voltage,PV14 voltage,RO,True,1,input,V
+31061,,S16,hybrid-inverter,100,True,hi-pv14-current,PV14 current,RO,True,1,input,A
+31062,,S16,hybrid-inverter,10,True,hi-pv15-voltage,PV15 voltage,RO,True,1,input,V
+31063,A,S16,hybrid-inverter,100,True,hi-pv15-current,PV15 current,RO,True,1,input,A
+31064,,S16,hybrid-inverter,10,True,hi-pv16-voltage,PV16 voltage,RO,True,1,input,V
+31065,,S16,hybrid-inverter,100,True,hi-pv16-current,PV16 current,RO,True,1,input,A
+31500,,U16,hybrid-inverter,10,False,hi-dc-charger-vehicle-battery-voltage,[DC Charger] Vehicle battery voltage,RO,False,1,input,V
+31501,,U16,hybrid-inverter,10,False,hi-dc-charger-charging-current,[DC Charger] Charging current,RO,False,1,input,A
+31502,,S32,hybrid-inverter,1000,False,hi-dc-charger-output-power,[DC Charger] Output power,RO,False,2,input,kW
+31504,,U16,hybrid-inverter,10,False,hi-dc-charger-vehicle-soc,[DC Charger] Vehicle SOC,RO,False,1,input,%
+31505,Single time,U32,hybrid-inverter,100,False,hi-dc-charger-current-charging-capacity,[DC Charger] Current charging capacity,RO,False,2,input,kWh
+31507,Single time,U32,hybrid-inverter,1,False,hi-dc-charger-current-charging-duration,[DC Charger] Current charging duration,RO,False,2,input,s
+41000,"0: Start, 1: Stop",U16,hybrid-inverter,1,True,hi-dc-charger-start-stop,[DC Charger] Start/Stop,WO,False,1,holding,
+41500,"0: disabled, 1: enabled, The enabled inverter only reacts on power control command from register: 41501, 41503, 41505, 41506, 40507.",U16,hybrid-inverter,1,True,hi-remote-ems-dispatch-enable,Remote EMS dispatch enable,RW,False,1,holding,
+41501,,S32,hybrid-inverter,1000,True,hi-active-power-fixed-value-adjustment,Active power fixed value adjustment,RW,False,2,holding,kW
+41503,,S32,hybrid-inverter,1000,True,hi-reactive-power-fixed-value-adjustment,Reactive power fixed value adjustment,RW,False,2,holding,kVar
+41505,,S16,hybrid-inverter,100,True,hi-active-power-percentage-adjustment,Active power percentage adjustment,RW,False,1,holding,%
+41506,,S16,hybrid-inverter,100,True,hi-reactive-power-q-s-adjustment,Reactive power Q/S adjustment,RW,False,1,holding,%
+41507,,S16,hybrid-inverter,1000,True,hi-power-factor-adjustment,Power factor adjustment,RW,False,1,holding,
+32000,"System states according to IEC61851-1 definition., Refer to Appendix 7.",U16,ac-charger,1,,acc-system-state,System state,RO,,1,input,
+32001,,U32,ac-charger,100,,acc-total-energy-consumed,Total energy consumed,RO,,2,input,kWh
+32003,,S32,ac-charger,1000,,acc-charging-power,Charging power,RO,,2,input,kW
+32005,,U32,ac-charger,1000,,acc-rated-power,Rated power,RO,,2,input,kW
+32007,,S32,ac-charger,100,,acc-rated-current,Rated current,RO,,2,input,A
+32009,,U16,ac-charger,10,,acc-rated-voltage,Rated voltage,RO,,1,input,V
+32010,,S32,ac-charger,100,,acc-ac-charger-input-breaker-rated-current,AC-Charger input breaker rated current,RO,,2,input,A
+32012,Refer to Appendix 8,U16,ac-charger,1,,acc-alarm1,Alarm1,RO,,1,input,
+32013,Refer to Appendix 9,U16,ac-charger,1,,acc-alarm2,Alarm2,RO,,1,input,
+32014,Refer to Appendix 10,U16,ac-charger,1,,acc-alarm3,Alarm3,RO,,1,input,
+42000,"0: Start, 1: Stop",U16,ac-charger,1,,acc-start-stop,Start/Stop,WO,,1,holding,
+42001,"[6, X], X is the smaller value between the rated current and the AC-Charger input breaker rated current.",U32,ac-charger,100,,acc-charger-output-current,Charger output current,RW,,1,holding,

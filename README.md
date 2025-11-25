@@ -24,11 +24,18 @@ The JSON format includes:
 
 ```json
 {
-    "id": "p-system-time",
-    "name": "System time", 
-    "address": 30000,
-    "dataType": "U32",
-    "unit": "s",
-    "permission": "RO"
+    "id": "hi-ess-accumulated-charge-energy",
+    "deviceType": "hybrid-inverter",
+    "name": "[ESS] Accumulated charge energy",
+    "registerType": "input",
+    "address": 30568,
+    "quantity": 4,
+    "permission": "RO",
+    "dataType": "U64",
+    "gain": 100,
+    "unit": "kWh",
+    "hybridInv": true,
+    "pvInv": false,
+    "comment": ""
 }
 ```

@@ -1524,6 +1524,7 @@
         "permission": "RO",
         "dataType": "U32",
         "gain": 100,
+        "unit": "kWh",
         "hybridInv": true,
         "pvInv": false,
         "comment": ""

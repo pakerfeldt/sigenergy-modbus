@@ -1538,7 +1538,7 @@
         "permission": "RO",
         "dataType": "S32",
         "gain": 1000,
-        "unit": "kWh",
+        "unit": "kW",
         "hybridInv": true,
         "pvInv": false,
         "comment": ""
